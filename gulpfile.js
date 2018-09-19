@@ -48,6 +48,11 @@ gulp.task('images', function(){
         .pipe(gulp.dest('build/assets/'));
 });
 
+gulp.task('icons', function() {
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+        .pipe(gulp.dest('build/webfonts/'));
+});
+
 gulp.task('watch', function(){
     gulp.watch('src/styles/**/*.scss', ['styles']);
     gulp.watch('src/scripts/**/*.js', ['scripts']);
