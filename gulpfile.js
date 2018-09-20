@@ -35,10 +35,11 @@ gulp.task('js', function(){
             console.log(error.message);
             this.emit('end');
     }}))
-    .pipe(babel())
-    .pipe(gulp.dest('build/scripts/'))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(babel({
+        presets: ['es2015']
+    }))
     .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('build/scripts/'))
 });
 
@@ -54,6 +55,6 @@ gulp.task('icons', function() {
 });
 
 gulp.task('watch', function(){
-    gulp.watch('src/styles/**/*.scss', ['styles']);
-    gulp.watch('src/scripts/**/*.js', ['scripts']);
+    gulp.watch('src/styles/**/*.scss', ['sass']);
+    gulp.watch('src/scripts/**/*.js', ['js']);
 });
