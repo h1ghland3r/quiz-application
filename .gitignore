@@ -1,4 +1,6 @@
 node_modules
-build
+build/assets
+build/scripts
+build/styles
 npm-debug.log
 .DS_Store
