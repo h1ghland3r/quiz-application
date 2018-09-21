@@ -35,8 +35,25 @@ function verifyAnswer() {
     }
     if (counter === numberOfQuestions) {
         verifyRomanNumeral();
-        alert('You scored ' + score + ' points of ' + numberOfQuestions + '.');
         randomNumber.innerHTML = 'No more questions.';
+        if (score === 0) {
+            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Looser!');
+        }
+        if (score >= 1 && score <=3 ) {
+            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Not Bad!');
+        }
+        if (score >= 4 && score <=5 ) {
+            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Good Starter!');
+        }
+        if (score >= 5 && score <=7 ) {
+            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Really nice!');
+        }
+        if (score >= 8 && score <=9 ) {
+            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Impressive!');
+        }
+        if (score === 10 ) {
+            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Perfect!');
+        }
     }
     if (counter > numberOfQuestions) {
     }
@@ -98,7 +115,8 @@ function restartQuiz() {
 }
 
 function displayErrorMessage() {
-    randomNumber.innerHTML = 'Not this time. Start again.';
+    randomNumber.innerHTML = 'Not this time.';
+    btnRestart.classList.toggle('d-block');
     numberOfErrors = 0;
 }
 
@@ -120,6 +138,7 @@ btnSubmit.addEventListener('click', function() {
 
 btnRestart.addEventListener('click', function() {
     restartQuiz();
+    this.classList.toggle('d-block');
 });
 
 ['blur', 'key up', 'input', 'paste', 'change'].forEach(function(e) {
