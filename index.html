@@ -12,29 +12,63 @@
 
         <header class="container-fluid">
             <div class="text-center">
-                <h1>Do you know Roman Numerals?</h1>
+                <h1 class="jupiter-pro">Do you know Roman Numerals?</h1>
             </div>
         </header>
 
         <section id="main" role="main" class="container">
             <div class="row">
                 <div class="col-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p class="text-description py-2">
+                        Welcome to the Roman Numeral Quiz of the Summer Fest. The rules are very simple. You have up to <span class="lato-bold">10 questions</span> to score, but you can miss only <span class="lato-bold">3 times</span>. Below is a summary table of Roman numerals:
+                    </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm">
-                    <div>
-                        <p>The number is:</p>
+                    <div class="table-responsive rounded my-2 mb-4">
+                        <table class="table">
+                            <thead class="thead-alt">
+                                <tr>
+                                    <th scope="col">Romans</th>
+                                    <th scope="col">I</th>
+                                    <th scope="col">V</th>
+                                    <th scope="col">X</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">C</th>
+                                    <th scope="col">D</th>
+                                    <th scope="col">M</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Numerals</th>
+                                    <td>1</td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                    <td>50</td>
+                                    <td>100</td>
+                                    <td>500</td>
+                                    <td>1000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="text-center">
+                        <p class="text-description">The number is:</p>
                         <p id="randomNumber"></p>
                         <button id="btnRestart" class="btn btn-restart d-none">Start again</button>
                     </div>
-                    <div class="form">
+                    <div class="form text-center">
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Enter the roman numeral that stands for:</label>
-                            <input type="text" class="form-control" id="romanInputed" autocomplete="off">
+                            <label for="roman-inputed" class="text-description">Which roman numeral that stands for the above number:</label>
+                            <input type="text" class="form-control mx-auto my-2" id="romanInputed" name="roman-inputed" autocomplete="off">
                         </div>
-                        <button id="btnSubmit" class="btn btn-submit">Check your answer</button>
+                        <button id="btnSubmit" class="btn btn-submit my-4">Check your answer</button>
                     </div>
                 </div>
             </div>

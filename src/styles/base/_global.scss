@@ -5,8 +5,15 @@ body {
     font-size: 16px;
 }
 
-.form {
-    input {
-        text-transform: uppercase;
-    }
+/* Utilities for text */
+.lato-regular {
+    font-family: "Lato Regular", sans-serif;
+}
+
+.lato-bold {
+    font-family: "Lato Bold", sans-serif;
+}
+
+.jupiter-pro {
+    font-family: "Jupiter Pro", sans-serif;
 }
