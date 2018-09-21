@@ -25,7 +25,6 @@ function generateQuestions() {
     randomNumber.innerHTML = questions[0];
     return questions;
 }
-console.log(questions); // TODO - Remove
 
 function verifyAnswer() {
     counter++;
@@ -64,7 +63,6 @@ function verifyAnswer() {
     if (numberOfErrors >= maxErrors) {
         displayErrorMessage();
     }
-    console.log("errors: " + numberOfErrors); // TODO - Remove
 }
 
 // calculates roman numeral from an arabic number
