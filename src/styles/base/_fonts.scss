@@ -3,3 +3,30 @@
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+
+@font-face {
+    font-family: 'Lato Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../webfonts/Lato-Regular.ttf'),
+         url('../webfonts/Lato-Regular.woff2') format('woff2'),
+         url('../webfonts/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../webfonts/Lato-Bold.ttf'),
+         url('../webfonts/Lato-Bold.woff2') format('woff2'),
+         url('../webfonts/Lato-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jupiter Pro';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../webfonts/JupiterPro-Bold.ttf'),
+         url('../webfonts/JupiterPro-Bold.woff2') format('woff2'),
+         url('../webfonts/JupiterPro-Bold.woff') format('woff');
+}
