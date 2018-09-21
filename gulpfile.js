@@ -37,7 +37,7 @@ gulp.task('js', function(){
             ['es2015', {modules: false}]
         ]
     }))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('build/scripts/'))
 });
@@ -45,7 +45,7 @@ gulp.task('js', function(){
 gulp.task('plugins', function(){
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
-        "node_modules/tether/dist/js/tether.min.js",
+        'node_modules/tether/dist/js/tether.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js'
     ])
     .pipe(plumber({
