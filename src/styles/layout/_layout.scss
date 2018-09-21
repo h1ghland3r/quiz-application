@@ -24,6 +24,17 @@ header {
     }
 }
 
+.btn {
+    font-size: 1.25rem;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    background: $background-alt;
+    color: $text-for-background-alt;
+    &:hover, &:focus, &:active {
+        background: rgba($background-alt, $alpha);
+    }
+}
+
 .form {
     label[for="roman-inputed"] {
         margin-bottom: 20px;
@@ -34,16 +45,6 @@ header {
         width: 280px;
         font-size: 1.25rem;
         text-align: center;
-    }
-    .btn-submit {
-        font-size: 1.25rem;
-        height: 3rem;
-        padding: 0.5rem 1rem;
-        background: $background-alt;
-        color: $text-for-background-alt;
-        &:hover, &:focus, &:active {
-            background: rgba($background-alt, $alpha);
-        }
     }
 }
 
