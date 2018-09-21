@@ -10,8 +10,43 @@
 
     <body>
 
+        <header class="container-fluid">
+            <div class="text-center">
+                <h1>Do you know Roman Numerals?</h1>
+            </div>
+        </header>
+
+        <section id="main" role="main" class="container">
+            <div class="row">
+                <div class="col-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div>
+                        <p>The number is:</p>
+                        <p id="randomNumber"></p>
+                        <button id="btnRestart" class="btn btn-restart d-block">Start again</button>
+                    </div>
+                    <div class="form">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Enter the roman numeral that stands for:</label>
+                            <input type="text" class="form-control" id="romanInputed" autocomplete="off">
+                        </div>
+                        <button id="btnSubmit" class="btn btn-submit">Check your answer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+
         <script src="build/scripts/jquery.min.js"></script>
         <script src="build/scripts/tether.min.js"></script>
         <script src="build/scripts/bootstrap.min.js"></script>
+        <script src="build/scripts/app.min.js"></script>
     </body>
 </html>

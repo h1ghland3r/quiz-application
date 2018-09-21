@@ -1,0 +1,10 @@
+body {
+    background: $background;
+    color: $text-default;
+}
+
+.form {
+    input {
+        text-transform: uppercase;
+    }
+}
