@@ -3,7 +3,7 @@ let counter = 0;
 let score = 0;
 let numberOfErrors = 0;
 let maxErrors = 3;
-let numberOfQuestions = 3;
+let numberOfQuestions = 10;
 
 // get elements
 let randomNumber = document.getElementById('randomNumber');
@@ -13,7 +13,7 @@ let btnRestart = document.getElementById('btnRestart');
 
 // gerenate random number
 const min = 1; // min is 1 because there is no zero in the roman numerals
-let max = 10; // sets the desired maxinum number for the random
+let max = 100; // sets the desired maxinum number for the random
 let generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 // quiz
@@ -29,35 +29,39 @@ console.log(questions); // TODO - Remove
 
 function verifyAnswer() {
     counter++;
+    // continue while there are questions available
     if (counter < numberOfQuestions) {
         verifyRomanNumeral();
         randomNumber.innerHTML = questions[counter];
     }
+    // check the result when reachs the last question
     if (counter === numberOfQuestions) {
         verifyRomanNumeral();
-        randomNumber.innerHTML = 'No more questions.';
-        if (score === 0) {
-            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Looser!');
-        }
-        if (score >= 1 && score <=3 ) {
-            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Not Bad!');
-        }
-        if (score >= 4 && score <=5 ) {
-            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Good Starter!');
-        }
-        if (score >= 5 && score <=7 ) {
-            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Really nice!');
-        }
-        if (score >= 8 && score <=9 ) {
-            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Impressive!');
-        }
-        if (score === 10 ) {
-            alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Perfect!');
+        if (numberOfErrors < maxErrors) {
+            randomNumber.innerHTML = 'You finished the quiz!';
+            if (score === 0) {
+                alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Looser!');
+            }
+            if (score >= 1 && score <=3 ) {
+                alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Not Bad!');
+            }
+            if (score >= 4 && score <=5 ) {
+                alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Good Starter!');
+            }
+            if (score >= 5 && score <=7 ) {
+                alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Really nice!');
+            }
+            if (score >= 8 && score <=9 ) {
+                alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Impressive!');
+            }
+            if (score === 10 ) {
+                alert('You scored ' + score + ' points of ' + numberOfQuestions + '. Perfect!');
+            }
+            btnRestart.classList.toggle('d-block');
         }
     }
-    if (counter > numberOfQuestions) {
-    }
-    if (numberOfErrors === maxErrors) {
+    // calls error message function when reaches the max number of wrong answers
+    if (numberOfErrors >= maxErrors) {
         displayErrorMessage();
     }
     console.log("errors: " + numberOfErrors); // TODO - Remove
@@ -115,7 +119,7 @@ function restartQuiz() {
 }
 
 function displayErrorMessage() {
-    randomNumber.innerHTML = 'Not this time.';
+    randomNumber.innerHTML = 'You missed the answer three times.';
     btnRestart.classList.toggle('d-block');
     numberOfErrors = 0;
 }
