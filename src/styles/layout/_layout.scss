@@ -9,8 +9,14 @@ header {
     .text-description {
         font-size: 1.25rem;
     }
-    #randomNumber {
+    .random-number {
         font-size: 3rem;
+        &--success {
+            font-size: 1.25rem;
+        }
+        &--fail {
+            font-size: 1.25rem;
+        }
     }
 }
 
@@ -42,7 +48,7 @@ header {
 
 .form {
     label[for="roman-inputed"] {
-        margin-bottom: 20px;
+        margin: 10px 0 20px 0;
     }
     input {
         text-transform: uppercase;
