@@ -33,6 +33,11 @@ header {
     &:hover, &:focus, &:active {
         background: rgba($background-alt, $alpha);
     }
+    i {
+        position: relative;
+        left: 4px;
+        font-size: 1rem;
+    }
 }
 
 .form {
