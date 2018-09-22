@@ -1,6 +1,6 @@
 # Quiz Application
 <br/>
-Quiz application develop using JavaScript
+Quiz application developed using JavaScript
 <br/><br/>
 
 **Developed using**
