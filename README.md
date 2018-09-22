@@ -1,6 +1,6 @@
-# Basic Form Application
+# Quiz Application
 <br/>
-Personal project for training Node.Js and MongoDB integration
+Quiz application develop using JavaScript
 <br/><br/>
 
 **Developed using**
