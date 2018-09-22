@@ -1,6 +1,4 @@
 # Quiz Application
-<br/>
-Quiz application developed using JavaScript
 <br/><br/>
 
 **Developed using**
