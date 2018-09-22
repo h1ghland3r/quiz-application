@@ -3,10 +3,9 @@
 
 **Developed using**
 <br/><br/>
-HTML5
-CSS/SASS/Boostrap
-FontAwesome
-JavaScript
+HTML5<br/>
+CSS/SASS/Bootstrap/FontAwesome<br/>
+JavaScript<br/>
 Gulp
 
 **Instructions for testing**
